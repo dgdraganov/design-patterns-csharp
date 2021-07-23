@@ -1,6 +1,6 @@
 namespace design_patterns_csharp.Strategy.Components
 {
-    public class JumpBehaviour : IMovingBehaviour
+    public class JumpMovingBehaviour : IMovingBehaviour
     {
         public void Move()
         {
