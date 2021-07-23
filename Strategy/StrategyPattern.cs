@@ -8,11 +8,15 @@ namespace design_patterns_csharp.Strategy
         {
             AnimalClient kangaroo = new AnimalClient(
                 movingBehaviour: new JumpMovingBehaviour(),
-                eatingBehaviour: new GrassEatingBehaviour()
+                eatingBehaviour: new FishEatingBehaviour()
                 );
             AnimalClient fish = new AnimalClient(
                 movingBehaviour: new SwimMovingBehaviour(),
-                eatingBehaviour: new SeagrassEatingBehaviour()
+                eatingBehaviour: new FishEatingBehaviour()
+                );
+            AnimalClient waterKangaroo = new AnimalClient(
+                movingBehaviour: new JumpMovingBehaviour(),
+                eatingBehaviour: new FishEatingBehaviour()
                 );
         }
     }
