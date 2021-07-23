@@ -4,7 +4,7 @@ namespace design_patterns_csharp.Adapter.Components
     {
         private IStarter _starter;
 
-        public EngineClient(IRunnable starter)
+        public EngineClient(IStarter starter)
         {
             _starter = starter;
         } 
