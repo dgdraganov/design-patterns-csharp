@@ -6,21 +6,27 @@ namespace design_patterns_csharp.Command
     {
         public void Main()
         {
-            // Finish: Make An Invoker !!
+            TVController controller = new TVController();
 
             TVDevice device = new TVDevice();
 
             ICommand onCmd = new TurnDeviceOnCommand(device);
-            onCmd.Execute();
+            controller.AddCommand("On", onCmd);
 
             ICommand offCmd = new TurnDeviceOffCommand(device);
-            offCmd.Execute();
+            controller.AddCommand("Off", offCmd);
 
-            ICommand upCmd = new TurnVolumeUpCommand(device);
-            upCmd.Execute();
+            ICommand upVolCmd = new TurnVolumeUpCommand(device);
+            controller.AddCommand("Up", upVolCmd);
 
-            ICommand downCmd = new TurnVolumeDownCommand(device);
-            downCmd.Execute();
+            ICommand downVolCmd = new TurnVolumeDownCommand(device);
+            controller.AddCommand("Down", downVolCmd);
+
+            // testing
+            controller.Invoke("On");
+            controller.Invoke("Up");
+            controller.Invoke("Down");
+            controller.Invoke("Off");
         }
     }
 }
