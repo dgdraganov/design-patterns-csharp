@@ -6,7 +6,6 @@ namespace design_patterns_csharp.Command.Components
         public TurnVolumeUpCommand(IVolumeControl device)
         {
             this.Device = device;
-
         }
         public IVolumeControl Device { get; }
         public void Execute()

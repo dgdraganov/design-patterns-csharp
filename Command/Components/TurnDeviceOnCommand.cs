@@ -7,7 +7,6 @@ namespace design_patterns_csharp.Command.Components
             Device = device;
         }
         public ITurnOnOff Device { get; }
-
         public void Execute()
         {
             System.Console.WriteLine("Execute On command!");

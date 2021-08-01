@@ -14,7 +14,6 @@ namespace design_patterns_csharp.Command.Components
         public void Off()
         {
             System.Console.WriteLine("TV is Off");
-            
         }
 
         public void On()
