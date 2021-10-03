@@ -7,7 +7,7 @@ namespace design_patterns_csharp.Adapter
         public void Main()
         {
             StartExecuteAdapter adaptedExecuter = new StartExecuteAdapter(new PrimeExecuter());
-            EngineClient engine = new EngineClient(starter: adaptedExecuter); 
+            EngineStartClient engine = new EngineStartClient(starter: adaptedExecuter); 
         }
     }
 }

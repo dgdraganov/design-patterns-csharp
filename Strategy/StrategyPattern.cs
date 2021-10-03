@@ -6,17 +6,17 @@ namespace design_patterns_csharp.Strategy
     {
         public void Main()
         {
-            AnimalClient kangaroo = new AnimalClient(
+            Animal kangaroo = new Animal(
                 movingBehaviour: new JumpMovingBehaviour(),
-                eatingBehaviour: new FishEatingBehaviour()
+                eatingBehaviour: new GrassEatingBehaviour()
                 );
-            AnimalClient fish = new AnimalClient(
+            Animal shark = new Animal(
                 movingBehaviour: new SwimMovingBehaviour(),
                 eatingBehaviour: new FishEatingBehaviour()
                 );
-            AnimalClient waterKangaroo = new AnimalClient(
-                movingBehaviour: new JumpMovingBehaviour(),
-                eatingBehaviour: new FishEatingBehaviour()
+            Animal waterKangaroo = new Animal(
+                movingBehaviour: new SwimMovingBehaviour(),
+                eatingBehaviour: new GrassEatingBehaviour()
                 );
         }
     }
